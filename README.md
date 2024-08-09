@@ -14,7 +14,7 @@ The Agnos Backend project is a project created for interviews at Agnos Health. T
 1. **Clone the Repository**
 
     ```sh
-    git clone https://github.com/Jackietanakit/agnosbackend.git
+    git clone https://github.com/Jackietanakit/tanakit_thangjantaraprapab_agnos_backend.git
     cd agnosbackend
     ```
 
