@@ -1,3 +1,6 @@
+## Overview
+
+The Agnos Backend project is a project created for interviews at Agnos Health. The project uses Go with the Gin framework, Nginx as a reverse proxy, and PostgreSQL for the database. The project will be built using Docker.
 
 ## Setup
 
