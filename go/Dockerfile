@@ -17,7 +17,7 @@ COPY . .
 RUN go build -o main .
 
 # Start a new stage from scratch
-FROM debian:bullseye-slim
+FROM debian:bookworm
 
 # Copy the Pre-built binary file from the previous stage
 COPY --from=builder /app/main .
