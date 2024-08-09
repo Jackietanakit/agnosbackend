@@ -30,9 +30,32 @@ The Agnos Backend project is a project created for interviews at Agnos Health. T
 
     Once the containers are running, you can access the API at `http://localhost:8080`. Nginx will proxy requests to the Go service.
 
-### Running Tests
+## API Endpoints
 
-To run the unit tests for the Go application, use the following command:
+- GET /: Returns "Hello, World!" message
+- POST /api/strong_password_steps: Accepts a JSON payload with an `init_password` field and returns the minimus steps required to make the password strong.
 
-```sh
-docker-compose run golang_service go test ./...
+### Example Request
+    ```sh
+    curl -X POST http://localhost:8080/api/strong_password_steps \
+    -H "Content-Type: application/json" \
+    -d '{"init_password": "password123"}'
+    ```
+### Example Response
+    ```sh
+    {
+    "num_of_steps": 1
+    }
+    ```
+
+## Running Tests
+
+- The unit test checks weather or not the logic of the minimum steps is correct.
+
+To run the unit tests for the Go application:
+
+    ```sh
+    docker-compose run golang_service go test ./...
+    ```
+
+
